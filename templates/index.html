@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select & Submit Choices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 5%;
+			height: 5%;
+		}
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+		h2 {
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        select {
+            font-size: 18px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select the image to test</h1>
+        <form action = "http://localhost:5000/uploader" method = "POST" enctype="multipart/form-data">
+
+			<input type="file" name="file">
+
+			<input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+<body>
+	<h2>ESME SUDRIA 2023 - Group Méline Libert, Florentin Flament, Louis Gidrol</h2>
+    <img src="https://www.cfasacef.fr/wp-content/uploads/2022/03/LOGO-ESME-SUDRIA-novembre-2021.png"  alt="ESME Sudria logo" class="center">
+	
+
+</body>
+</html>
+
+	
+

@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        /* New CSS to display images */
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 50px;
+        }
+
+    </style>
+<script>
+
+  const urlParams = new URLSearchParams(window.location.search)
+
+  const result = urlParams.get('result')
+  const result1 = urlParams.get('result1')
+  const result2 = urlParams.get('result2')
+  const attack = urlParams.get('attack')
+  const defense = urlParams.get('defense')
+  
+  document.addEventListener('DOMContentLoaded', e => {
+    const figcaption = document.getElementById(1) 
+    figcaption.innerText = "Original " + result
+  })
+  document.addEventListener('DOMContentLoaded', e => {
+    const figcaption2 = document.getElementById(2) 
+    figcaption2.innerText = "Attack " + attack + " " + result1
+  })
+  document.addEventListener('DOMContentLoaded', e => {
+    const figcaption3 = document.getElementById(3) 
+    figcaption3.innerText = "Defense " + defense + " " + result2
+  })
+</script>
+
+</head>
+<body>
+    <header>
+        <h1>Result page</h1>
+    </header>
+    
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+
+    <main>
+        <div class="image-container">
+			<figure>
+				<img src="{{url_for('static', filename='image.jpg')}}" alt="Original"> 
+			   <figcaption id = 1 >Original</figcaption>
+		  </figure>
+            <figure>
+        <img src="{{url_for('static', filename='modified_image.jpg')}}" alt="Attack"/> 
+			   <figcaption id = 2>Attack</figcaption>
+		    </figure>
+			<figure>
+				<img src="{{url_for('static', filename='modified_image.jpg')}}" alt="Defense"> 
+			   <figcaption id = 3>Defense</figcaption>
+		    </figure>
+        </div>
+    </main>
+</body>
+</html>
+
+
